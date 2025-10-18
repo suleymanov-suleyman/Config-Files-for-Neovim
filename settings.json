@@ -1,0 +1,19 @@
+{
+    "typescript.suggest.paths": false,
+    "javascript.suggest.paths": false,
+    "editor.formatOnSave": true,
+    "editor.fontSize": 14,
+    "keyboard.dispatch": "keyCode",
+    "window.menuBarVisibility": "toggle",
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "github.copilot.chat.codeGeneration.useInstructionFiles": false,
+    "editor.inlineSuggest.enabled": false,
+    "github.copilot.enable": {
+        "*": true
+    },
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "redhat.telemetry.enabled": true,
+    "workbench.editor.empty.hint": "hidden"
+}
