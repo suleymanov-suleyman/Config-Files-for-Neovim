@@ -27,7 +27,6 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", "<leader>c", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
 -- Center screen when jumping
-vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
@@ -71,4 +70,8 @@ vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 
 -- Quick config editing
-vim.keymap.set("n", "<leader>rc", ":e ~/.config/nvim/init.lua<CR>", { desc = "Edit config" })
+vim.keymap.set("n", "<leader>rc", ":e ~/.config/nvim/lua/core/keymaps.lua<CR>", { desc = "Edit config" })
+vim.keymap.set('n', '<A-q>', 'viwc', { noremap = true, silent = true, desc = "Kelimeyi seç ve değiştir" })
+vim.keymap.set('n', '<A-a>', 'viw', { noremap = true, silent = true, desc = "Kelimeyi seç" })
+vim.keymap.set('n', 'm', '^', { noremap = true, silent = true, desc = "Satır başına git (ilk karakter)" })
+vim.keymap.set('n', 'n', 'g_', { noremap = true, silent = true, desc = "Satır sonuna git (son karakter)" })
