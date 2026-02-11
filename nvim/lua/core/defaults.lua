@@ -9,7 +9,7 @@ vim.opt.scrolloff = 10                             -- Keep 10 lines above/below 
 vim.opt.sidescrolloff = 8                          -- Keep 8 columns left/right of cursor
 
 -- Indentation
-vim.opt.tabstop = 2                                -- Tab width
+vim.opt.tabstop = 4                               -- Tab width
 vim.opt.shiftwidth = 2                             -- Indent width
 vim.opt.softtabstop = 2                            -- Soft tab stop
 vim.opt.expandtab = true                           -- Use spaces instead of tabs
