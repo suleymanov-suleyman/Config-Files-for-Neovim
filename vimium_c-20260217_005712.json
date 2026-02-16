@@ -1,0 +1,42 @@
+{
+	"name": "Vimium C",
+	"@time": "2/17/2026, 12:57:12 AM",
+	"time": 1771279032149,
+	"environment": {
+		"extension": "2.12.3",
+		"platform": "linux",
+		"firefox": 147
+	},
+	"keyLayout": 2,
+	"keyMappings": [
+		"#!no-check",
+		"# Clear old maps",
+		"unmap j",
+		"unmap k",
+		"unmap l",
+		"unmap h",
+		"unmap H",
+		"unmap L",
+		"unmap J",
+		"unmap K",
+		"",
+		"# Navigation keybinds",
+		"map j scrollLeft",
+		"map k scrollDown",
+		"map l scrollUp",
+		"map ; scrollRight",
+		"",
+		"# Go back and forward ",
+		"map J goBack",
+		"map : goForward",
+		"",
+		"# Next and previous tab",
+		"map K previousTab",
+		"map L nextTab",
+		""
+	],
+	"keyupTime": 90,
+	"scrollStepSize": 50,
+	"searchUrl": "https://search.brave.com/search?q=$s",
+	"vimSync": true
+}
