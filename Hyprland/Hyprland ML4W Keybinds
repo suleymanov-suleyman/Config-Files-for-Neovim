@@ -1,5 +1,4 @@
 #This config for hyprland ml4w .config/hypr/conf/custom.conf
-
 # Unbind old shortcuts
 unbind = $mainMod, w
 unbind = $mainMod, q
@@ -16,6 +15,8 @@ unbind = $mainMod ALT, j
 unbind = $mainMod ALT, semicolon
 unbind = $mainMod ALT, l
 unbind = $mainMod ALT, k
+unbind = $mainMod, n
+unbind = $mainMod, h
 
 # Switch capslook and escape
 input {
@@ -28,6 +29,8 @@ exec-once = vicinae server
 bind = $mainMod, w, exec, vicinae toggle
 
 bind = $mainMod, grave, killactive                                      
+bind = $mainMod, h, swapsplit
+bind = $mainMod, n,togglesplit
 
 # Focus
 bind = $mainMod, j, movefocus, l                                    
