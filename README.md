@@ -5,3 +5,5 @@ my config files for neovim keymaps and settings for neovim, intellij idea vim ex
 home/.config/nvim  
 after setting files you need to apply with **so %** 
  
+## Hyprland custom config location:
+.config/hypr/conf/custom.conf
