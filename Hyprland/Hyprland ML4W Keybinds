@@ -1,26 +1,51 @@
-#This file for hyprland ml4w keybinds/default.conf
-#Just replace settings
+#This config for hyprland ml4w .config/hypr/conf/custom.conf
+
+# Unbind old shortcuts
+unbind = $mainMod, w
+unbind = $mainMod, q
+unbind = $mainMod, j
+unbind = $mainMod, semicolon
+unbind = $mainMod, l
+unbind = $mainMod, k
+unbind = $mainMod SHIFT, j
+unbind = $mainMod SHIFT, semicolon
+unbind = $mainMod SHIFT, l
+unbind = $mainMod SHIFT, k
+unbind = $mainMod, grave
+unbind = $mainMod ALT, j
+unbind = $mainMod ALT, semicolon
+unbind = $mainMod ALT, l
+unbind = $mainMod ALT, k
+
+# Switch capslook and escape
 input {
-    kb_options = caps:escape
-    kb_options = caps:swapescape
+    kb_options = caps:swapescape 
 }
 
-bind = $mainMod, grave, killactive                                                              # Kill active window
+exec-once = vicinae server
 
-bind = $mainMod, `, togglesplit                                                             # Toggle split
-bind = $mainMod, j, movefocus, l                                                         # Move focus left
-bind = $mainMod, semicolon, movefocus, r                                                        # Move focus right
-bind = $mainMod, l, movefocus, u                                                           # Move focus up
-bind = $mainMod, k, movefocus, d                                                         # Move focus down
+# Vicinae applications manager
+bind = $mainMod, w, exec, vicinae toggle
 
-bind = $mainMod SHIFT, j, resizeactive, 100 0                                           # Increase window width with keyboard
-bind = $mainMod SHIFT, semicolon, resizeactive, -100 0                                           # Reduce window width with keyboard
-bind = $mainMod SHIFT, l, resizeactive, 0 100                                            # Increase window height with keyboard
-bind = $mainMod SHIFT, k, resizeactive, 0 -100                                             # Reduce window height with keyboard
-bind = $mainMod, G, togglegroup                                                             # Toggle window group
-bind = $mainMod, `, swapsplit                                                               # Swapsplit
+bind = $mainMod, grave, killactive                                      
 
-bind = $mainMod ALT, j, swapwindow, l                                                    # Swap tiled window left
-bind = $mainMod ALT, semicolon, swapwindow, r                                                   # Swap tiled window right
-bind = $mainMod ALT, l, swapwindow, u                                                      # Swap tiled window up
-bind = $mainMod ALT, k, swapwindow, d                                                    # Swap tiled window down
+# Focus
+bind = $mainMod, j, movefocus, l                                    
+bind = $mainMod, semicolon, movefocus, r                            
+bind = $mainMod, l, movefocus, u                                    
+bind = $mainMod, k, movefocus, d                                    
+
+# Resize
+bind = $mainMod SHIFT, j, resizeactive, 100 0                       
+bind = $mainMod SHIFT, semicolon, resizeactive, -100 0              
+bind = $mainMod SHIFT, l, resizeactive, 0 100                       
+bind = $mainMod SHIFT, k, resizeactive, 0 -100                      
+
+# Group
+bind = $mainMod, G, togglegroup                                     
+
+# Swap
+bind = $mainMod ALT, j, swapwindow, l                               
+bind = $mainMod ALT, semicolon, swapwindow, r                       
+bind = $mainMod ALT, l, swapwindow, u                               
+bind = $mainMod ALT, k, swapwindow, d
