@@ -1,7 +1,7 @@
 {
 	"name": "Vimium C",
-	"@time": "2/17/2026, 12:57:12 AM",
-	"time": 1771279032149,
+	"@time": "2/17/2026, 1:18:47 AM",
+	"time": 1771280327531,
 	"environment": {
 		"extension": "2.12.3",
 		"platform": "linux",
@@ -33,6 +33,12 @@
 		"# Next and previous tab",
 		"map K previousTab",
 		"map L nextTab",
+		"",
+		"# Visual mod navigation",
+		"mapkey <j:v> h",
+		"mapkey <k:v> j",
+		"mapkey <l:v> k",
+		"mapkey <;:v> l",
 		""
 	],
 	"keyupTime": 90,
