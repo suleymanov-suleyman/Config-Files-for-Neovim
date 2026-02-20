@@ -1,4 +1,5 @@
 #This config for hyprland ml4w .config/hypr/conf/custom.conf
+
 # Unbind old shortcuts
 unbind = $mainMod, w
 unbind = $mainMod, q
@@ -17,6 +18,11 @@ unbind = $mainMod ALT, l
 unbind = $mainMod ALT, k
 unbind = $mainMod, n
 unbind = $mainMod, h
+unbind = , XF86AudioRaiseVolume
+unbind = , XF86AudioLowerVolume
+unbind = , XF86AudioMute
+unbind = , XF86MonBrightnessUp
+unbind = , XF86MonBrightnessDown
 
 # Switch capslook and escape
 input {
@@ -25,6 +31,7 @@ input {
 
 exec-once = vicinae server
 exec-once = nm-applet --indicator
+exec-once = swayosd-server
 
 # Vicinae applications manager
 bind = $mainMod, w, exec, vicinae toggle
@@ -32,7 +39,7 @@ bind = $mainMod, w, exec, vicinae toggle
 bind = $mainMod, grave, killactive                                      
 bind = $mainMod, h, swapsplit
 bind = $mainMod, n,togglesplit
-
+bind = SUPER, L, exec, hyprlock
 # Focus
 bind = $mainMod, j, movefocus, l                                    
 bind = $mainMod, semicolon, movefocus, r                            
@@ -53,3 +60,10 @@ bind = $mainMod ALT, j, swapwindow, l
 bind = $mainMod ALT, semicolon, swapwindow, r                       
 bind = $mainMod ALT, l, swapwindow, u                               
 bind = $mainMod ALT, k, swapwindow, d
+
+# OSD
+bind = , XF86AudioRaiseVolume, exec, swayosd-client --output-volume raise
+bind = , XF86AudioLowerVolume, exec, swayosd-client --output-volume lower
+bind = , XF86AudioMute, exec, swayosd-client --output-volume mute-toggle
+bind = , XF86MonBrightnessUp, exec, swayosd-client --brightness raise
+bind = , XF86MonBrightnessDown, exec, swayosd-client --brightness lower
