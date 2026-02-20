@@ -24,6 +24,7 @@ input {
 }
 
 exec-once = vicinae server
+exec-once = nm-applet --indicator
 
 # Vicinae applications manager
 bind = $mainMod, w, exec, vicinae toggle
