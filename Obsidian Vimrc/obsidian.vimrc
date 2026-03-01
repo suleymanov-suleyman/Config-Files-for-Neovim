@@ -1,6 +1,10 @@
-" githubdan kopyalarken dosya adinin basina "." koy!
 " --- TEMEL AYARLAR ---
 set tabstop=4
+exmap blurEditor jsfile blur.js
+
+exmap showVimium obcommand vimium:show-markers
+nmap f :blurEditor<CR>:showVimium<CR>
+set clipboard=unnamed
 
 " --- JKL; YÖN TUŞLARI (hjkl Yerine) ---
 noremap j h
