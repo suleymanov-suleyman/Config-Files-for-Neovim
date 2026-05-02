@@ -2,6 +2,32 @@
 
 fish_vi_key_bindings
 
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    fish_vi_key_bindings
+end
+
+# --- ALIASES ---
+alias ar='distrobox enter arch-dev'
+alias ub='distrobox enter Ubuntu-Bazzite'
+alias c='clear'
+alias upc='yay -Syu'
+alias upu='sudo nala update && sudo nala upgrade'
+alias arc="distrobox enter arch-dev -- /usr/bin/fish"
+alias e="exit"
+
+# --- FUNCTIONS ---
+function startlamp 
+    sudo mkdir -p /run/httpd
+    sudo httpd -k start
+    sudo mysqld_safe &
+end
+
+function stoplamp 
+    sudo httpd -k stop 
+    sudo mariadb-admin -u root shutdown
+end
+
 function fish_greeting
     set_color cyan
     echo -n "Greetings "
@@ -12,9 +38,11 @@ function fish_greeting
 end
 
 function fish_user_key_bindings
-    bind \ef forward-char   #hayalet yaziyi tamamlama kisayolu
-    bind \ed forward-word   #hayalet yaziyi kelime kelime tamamlama
+    # Hayalet yaziyi tamamlama kisayollari
+    bind \ef forward-char
+    bind \ed forward-word
 
+    # Vi mode ozel yon tuslari atamalari
     bind -M default j backward-char     
     bind -M default k down-or-search    
     bind -M default l up-or-search      
