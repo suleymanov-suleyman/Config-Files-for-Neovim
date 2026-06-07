@@ -1,3 +1,15 @@
+-- VPS'te paste copy yapma özelliği
+vim.g.clipboard = {
+  name = 'OSC 52',
+  copy = {
+    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+  },
+  paste = {
+    ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+  },
+}
 
 -- Normal modda jkl; yön tuşları
 vim.api.nvim_set_keymap('n', 'j', 'h', { noremap = true, silent = true })
