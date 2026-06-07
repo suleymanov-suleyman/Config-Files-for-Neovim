@@ -39,8 +39,9 @@ end
 
 function fish_user_key_bindings
     # Hayalet yaziyi tamamlama kisayollari
-    bind \ef forward-char
+    bind \es forward-char
     bind \ed forward-word
+    bind \ef accept-autosuggestion
 
     # Vi mode ozel yon tuslari atamalari
     bind -M default j backward-char     
